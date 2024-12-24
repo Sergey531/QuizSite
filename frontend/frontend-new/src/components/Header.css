@@ -1,0 +1,75 @@
+header {
+    background-color: #9A1750; /* Яркий розовый */
+    font-family: 'Lobster', cursive;
+    padding: 20px 10px;
+    text-align: center;
+    width: 100%; /* Ширина на всю страницу */
+    box-sizing: border-box;
+    color: #f2d5dd; /* Белый цвет текста */
+}
+
+header h1 {
+    margin: 20px 0 0;
+    font-size: 2.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Промежуток между кнопками */
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white; /* Белый цвет для ссылок */
+    font-size: 1.5rem; /* Увеличиваем размер шрифта */
+    font-weight: 700; /* Более жирный текст */
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #E3AFBC; /* Мягкий розовый при наведении */
+    color: #9A1750; /* Цвет текста меняется на розовый */
+}
+
+.add-answer-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-answer-button:hover {
+    background-color: #218838;
+}
+
+.remove-answer-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: white;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-answer-button:hover {
+    background-color: #c82333;
+}

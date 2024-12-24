@@ -1,0 +1,59 @@
+/* Контейнер для формы */
+.create-quiz-form-container {
+    display: flex;
+    justify-content: center;  /* Центрирует форму по горизонтали */
+    align-items: flex-start;  /* Центрирует форму по вертикали, но не по центру всего экрана */
+    height: 100vh;            /* Занимает всю высоту экрана */
+    padding-top: 40px;        /* Добавляем отступ сверху, чтобы форма была немного выше */
+}
+
+
+/* Стили для самой формы */
+.create-quiz-form {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Поля ввода */
+.create-quiz-form input,
+.create-quiz-form select,
+.create-quiz-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.create-quiz-form textarea {
+    height: 120px;
+}
+
+.create-quiz-form button {
+    background-color: #d92d48;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Эффект при наведении на кнопку */
+.create-quiz-form button:hover {
+    background-color: #b3273a;
+}
+
+@media (max-width: 600px) {
+    .create-quiz-form {
+        max-width: 100%; /* Убираем ограничение по ширине для мобильных устройств */
+    }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Results</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<header>
+    <h1>Test Results</h1>
+    <nav>
+        <a th:href="@{/quizzes}">Return to Quiz List</a>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Your Answers:</h2>
+        <div th:each="question : ${questions}">
+            <h3 th:text="${question.questionText}"></h3>
+            <p>Your answer: <span th:text="${question.selectedAnswer}"></span></p>
+            <p>Correct answer: <span th:text="${question.correctAnswer}"></span></p>
+        </div>
+        <h3>Thank you for participating!</h3>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Your Quiz Site</p>
+</footer>
+</body>
+</html>

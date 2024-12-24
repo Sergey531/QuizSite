@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Library</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<header>
+    <h1>Quiz Library</h1>
+    <nav>
+        <ul>
+            <li><a th:href="@{/}">Home</a></li>
+            <li><a th:href="@{/quizzes}">Quizzes</a></li>
+            <li><a th:href="@{/about}">About Us</a></li>
+            <li><a th:href="@{/create}">Create</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Available Quizzes</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="quiz, iterStat : ${quizzes}">
+                <td th:text="${iterStat.index + 1}"></td>
+                <td th:text="${quiz.title}"></td>
+                <td>
+                    <a th:href="@{/quiz/{id}(id=${quiz.id})}">Start</a>
+                    <a th:href="@{/addQuestions/{quizId}(quizId=${quiz.id})}">Add Question</a>
+                    <form th:action="@{/deleteQuiz/{id}(id=${quiz.id})}" method="post" style="display:inline;">
+                        <input type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete this quiz?');">
+                    </form>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<footer>
+    <p style="font-size: 30px; color:white">&copy; Amira ti amo</p>
+</footer>
+</body>
+</html>

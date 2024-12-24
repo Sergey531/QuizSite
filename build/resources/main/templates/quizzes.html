@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Quizzes</title>
+</head>
+<body>
+<h1>Quizzes</h1>
+<form th:action="@{/addQuiz}" method="post">
+    <label for="title">Quiz Title:</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="quizType">Quiz Type:</label>
+    <input type="text" id="quizType" name="quizType" required>
+
+    <label for="description">Quiz Description:</label>
+    <textarea id="description" name="description"></textarea>
+
+    <button type="submit">Create Quiz</button>
+</form>
+
+<ul>
+    <li th:each="quiz : ${quizzes}">
+        <span th:text="${quiz.title}"></span>
+    </li>
+</ul>
+</body>
+</html>

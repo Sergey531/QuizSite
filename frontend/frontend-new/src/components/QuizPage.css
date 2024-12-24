@@ -1,0 +1,239 @@
+/* Общий контейнер для страницы */
+.quiz-page-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Lobster', cursive;
+    color: #333;
+}
+
+/* Заголовок квиза */
+.quiz-page-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #5a5a5a;
+}
+
+/* Вопросы */
+.questions-container {
+    margin-top: 20px;
+}
+
+.question-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.question-item p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Стили для списка ответов */
+.answer-list {
+    color: black;
+    margin-top: 10px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.answer-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #eef6ff;
+    border: 1px solid #bcd4f6;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.answer-item:hover {
+    background-color: #d5e9ff;
+    transform: scale(1.02);
+}
+
+.delete-question-button {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.delete-question-button:hover {
+    background-color: #d32f2f;
+}
+
+p11 {
+    font-size: 30px;
+}
+
+.answer-item label {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Если хотите улучшить вид radio */
+.answer-item input[type="radio"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Обновленный контейнер для сообщения */
+.thanks-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Применяется только к самому сообщению */
+    padding: 20px;
+    background-color: #ffe5e5;
+    border-radius: 10px;
+}
+
+/* Стиль для самого сообщения */
+.thanks-message {
+    font-size: 2rem;
+    color: #8b3a62;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.9); /* Светлый фон */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    pointer-events: auto; /* Разрешаем взаимодействие только с этим элементом */
+}
+
+.thanks-message:hover {
+    transform: scale(1.05);
+}
+
+/* Стиль для кнопок в конце квиза */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.action-buttons button {
+    background-color: #6200ea;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.action-buttons button:hover {
+    background-color: #3700b3;
+    transform: scale(1.05);
+}
+
+.back-to-menu-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.back-to-menu-button:hover {
+    background-color: #45a049;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between; /* Разделяет кнопки "Previous" и "Next" */
+    margin-top: 20px;
+}
+
+.nav-button,
+.finish-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.nav-button:hover,
+.finish-button:hover {
+    background-color: #45a049;
+}
+
+.navigation-buttons .next-button {
+    margin-left: auto; /* Сдвигает кнопку "Next" вправо */
+}
+
+/* Обзор ответов */
+.answers-review {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.review-item {
+    margin-bottom: 20px;
+}
+
+.correct-answer {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.wrong-answer {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Цвет текста для правильного ответа */
+.correct-text {
+    color: #28a745; /* Зелёный */
+    font-weight: bold;
+}
+
+/* Цвет текста для неправильного ответа */
+.wrong-text {
+    color: #dc3545; /* Красный */
+    font-weight: bold;
+}
+
+/* Иконка правильного ответа */
+.correct-icon {
+    color: #28a745; /* Зелёный */
+    margin-left: 5px;
+    font-weight: 800;
+}
+
+/* Иконка неправильного ответа */
+.wrong-icon {
+    color: #dc3545; /* Красный */
+    margin-left: 5px;
+    font-weight: 700;
+}

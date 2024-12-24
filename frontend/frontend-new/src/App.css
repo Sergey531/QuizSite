@@ -1,0 +1,146 @@
+/* Глобальные стили */
+body {
+  font-family: 'Roboto', sans-serif; /* Используем шрифт Roboto для современности */
+  margin: 0;
+  padding: 0;
+  background-color: #E3AFBC; /* Мягкий розовый фон */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Обеспечиваем, чтобы высота страницы была на весь экран */
+  color: #5D001E; /* Темно-красный цвет текста */
+}
+
+/* Стили для заголовков */
+h1 {
+  font-size: 3rem; /* Увеличиваем размер заголовка */
+  font-weight: 700; /* Сделаем заголовок более жирным */
+  color: #f2d5dd; /* Темно-красный цвет */
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Стили для Header */
+header {
+  background-color: #9A1750; /* Яркий розовый */
+  font-family: 'Lobster', cursive;
+  padding: 20px;
+  text-align: center;
+  width: 100%; /* Ширина на всю страницу */
+  box-sizing: border-box;
+  color: #f2d5dd; /* Белый цвет текста */
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 15px; /* Увеличиваем отступы между пунктами */
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white; /* Белый цвет для ссылок */
+  font-size: 1.25rem; /* Увеличиваем размер шрифта */
+  font-weight: 500; /* Немного утончаем текст */
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+  color: #E3AFBC; /* Мягкий розовый при наведении */
+}
+
+/* Стили для Footer */
+footer {
+  background-color: #47131b; /* Темный футер */
+  font-family: 'Lobster', cursive;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Стили для таблицы квизов */
+table {
+  width: 90%; /* Увеличиваем ширину таблицы */
+  margin: 20px auto; /* Центрируем таблицу */
+  border-collapse: collapse;
+  font-size: 1.2rem;
+}
+
+th, td {
+  border: 1px solid #5D001E; /* Контур совпадает с цветом текста */
+  padding: 12px 20px; /* Увеличиваем отступы для ячеек */
+  text-align: center;
+}
+
+th {
+  background-color: #E3AFBC; /* Мягкий розовый фон для заголовков */
+  color: #5D001E; /* Цвет шрифта совпадает с текстом таблицы */
+  font-weight: 700; /* Сделаем заголовки более жирными */
+}
+
+td {
+  text-align: center; /* Центрируем текст в ячейках */
+}
+
+/* Кнопки */
+button.start {
+  background-color: #5D001E; /* Темно-красный для Start */
+}
+
+button.start:hover {
+  background-color: #9A1750; /* Плавный переход к яркому розовому */
+}
+
+button.add-question {
+  background-color: #007BFF; /* Синий для Add Question */
+}
+
+button.add-question:hover {
+  background-color: #0069D9; /* Более темный оттенок синего при наведении */
+}
+
+button.delete {
+  background-color: #DC3545; /* Красный для Delete */
+}
+
+button.delete:hover {
+  background-color: #C82333; /* Темнее красный при наведении */
+}
+
+button {
+  color: white;
+  border: none;
+  padding: 10px 30px; /* Увеличиваем кнопки */
+  cursor: pointer;
+  font-size: 1.1rem; /* Увеличиваем размер текста на кнопках */
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Уменьшаем ширину кнопок */
+td button {
+  max-width: 180px; /* Ограничиваем максимальную ширину кнопок */
+  margin: 5px; /* Добавляем немного отступа */
+}
+
+/* Контейнер для всего контента */
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  padding-bottom: 80px; /* Чтобы футер не перекрывал контент */
+}

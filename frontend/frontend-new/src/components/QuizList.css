@@ -1,0 +1,28 @@
+/* QuizList.css */
+
+/* Кнопка Start - зеленая */
+button.start {
+    background-color: #245931; /* Зеленый цвет */
+}
+
+button.start:hover {
+    background-color: #218838;
+}
+
+/* Кнопка Add Question - синий */
+button.add-question {
+    background-color: #27387d; /* Синий цвет */
+}
+
+button.add-question:hover {
+    background-color: #0069d9;
+}
+
+/* Кнопка Delete - красная */
+button.delete {
+    background-color: #820d1d; /* Красный цвет */
+}
+
+button.delete:hover {
+    background-color: #c82333;
+}

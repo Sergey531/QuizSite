@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Adding Questions to Quiz</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<header>
+    <h1>Adding Questions to Quiz</h1>
+    <nav>
+        <ul>
+            <li><a th:href="@{/}">Home</a></li>
+            <li><a th:href="@{/quizzes}">Quizzes</a></li>
+            <li><a th:href="@{/about}">About Us</a></li>
+            <li><a th:href="@{/create}">Create</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <form th:action="@{/addQuestion/{quizId}(quizId=${quiz.id})}" method="post">
+            <label for="questionText">Enter Question Text:</label>
+            <input type="text" id="questionText" name="questionText" required>
+
+            <h3>Answer Options:</h3>
+            <div id="answerFields">
+                <div>
+                    <input type="text" name="answerTexts" placeholder="Answer 1" required>
+                    <input type="checkbox" name="isCorrect" value="true"> Correct
+                </div>
+                <div>
+                    <input type="text" name="answerTexts" placeholder="Answer 2" required>
+                    <input type="checkbox" name="isCorrect" value="true"> Correct
+                </div>
+            </div>
+
+            <button type="button" onclick="addAnswer()">Add Answer Option</button>
+            <button type="submit">Add Question</button>
+        </form>
+
+        <script>
+            let answerCount = 2;
+
+            function addAnswer() {
+                if (answerCount < 6) {
+                    const div = document.createElement('div');
+                    div.innerHTML = `<input type="text" name="answerTexts" required placeholder="Answer ${answerCount + 1}">
+                                     <input type="checkbox" name="isCorrect" value="true"> Correct`;
+                    document.getElementById('answerFields').appendChild(div);
+                    answerCount++;
+                } else {
+                    alert("You can add no more than 6 answer options.");
+                }
+            }
+        </script>
+
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Your Quiz Site</p>
+</footer>
+</body>
+</html>

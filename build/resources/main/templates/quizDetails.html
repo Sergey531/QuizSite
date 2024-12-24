@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${quiz.title}">Quiz</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<header>
+    <h1 th:text="${quiz.title}">Quiz Title</h1>
+    <nav>
+        <a th:href="@{/quizzes}">Return to Quiz List</a>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Questions:</h2>
+        <div th:each="question, iterStat : ${quiz.questions}">
+            <div th:if="${iterStat.index == questionIndex}">
+                <h3 th:text="${question.text}"></h3>
+                <!-- Here you can add a button to navigate to the next or previous question -->
+                <div>
+                    <form th:action="@{/quiz/{quizId}/question/{index}(quizId=${quiz.id}, index=${iterStat.index - 1})}" method="get" th:if="${iterStat.index > 0}">
+                        <input type="submit" value="Previous Question">
+                    </form>
+                    <form th:action="@{/quiz/{quizId}/question/{index}(quizId=${quiz.id}, index=${iterStat.index + 1})}" method="get" th:if="${iterStat.index < quiz.questions.size() - 1}">
+                        <input type="submit" value="Next Question">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Your Quiz Site</p>
+</footer>
+</body>
+</html>

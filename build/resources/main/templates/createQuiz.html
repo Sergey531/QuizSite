@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Creating a Quiz</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<header>
+    <h1>Creating a New Quiz</h1>
+    <nav>
+        <ul>
+            <li><a th:href="@{/}">Home</a></li>
+            <li><a th:href="@{/quizzes}">Quizzes</a></li>
+            <li><a th:href="@{/about}">About Us</a></li>
+            <li><a th:href="@{/create}">Create</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Quiz Creation Form</h2>
+        <form th:action="@{/addQuiz}" method="post">
+            <label for="title">Quiz Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="quizType">Select Quiz Type:</label>
+            <select id="quizType" name="quizType" required>
+                <option value="personality">Personality Quiz</option>
+                <option value="scored">Scored Quiz</option>
+            </select>
+
+            <label for="description">Quiz Description:</label>
+            <textarea id="description" name="description"></textarea>
+
+            <button type="submit">Create Quiz</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Your Quiz Site</p>
+</footer>
+</body>
+</html>
